@@ -1,0 +1,8 @@
+/target
+
+# Local credentials and captured challenges.
+secrets.yml
+secrets.yaml
+.env
+.env.*
+!.env.example

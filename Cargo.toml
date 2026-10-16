@@ -1,0 +1,23 @@
+[package]
+name = "jev-solver"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Rust CLI and browser automation for reCAPTCHA v2 image grids using TypeSafe Jev"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive", "env"] }
+httpdate = "1.0"
+image = { version = "0.25.10", default-features = false, features = ["png", "jpeg", "webp"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["rustls", "json", "multipart"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml_ng = "0.10"
+thirtyfour = { version = "0.37.8", default-features = false, features = ["reqwest", "rustls", "manager"] }
+tokio = { version = "1.48", features = ["macros", "rt-multi-thread", "time", "signal"] }
+uuid = { version = "1.18", features = ["v4"] }
+
+[dev-dependencies]
+axum = { version = "0.8", features = ["multipart"] }
+tempfile = "3.23"
